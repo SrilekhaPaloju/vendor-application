@@ -1,0 +1,20 @@
+/* Enter your custom styles here */
+.vendor{
+    background-image: url('https://i.postimg.cc/pXd6fvQ7/istockphoto-1356475672-612x612-2.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;  
+    background-position: center;
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+ 
+    to {
+        transform: translateY(0);
+    }
+}
+.dialogSlideDown {
+    animation: slideDown 0.5s forwards;
+}

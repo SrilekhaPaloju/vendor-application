@@ -1,0 +1,146 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
+>
+    <Dialog
+        id="idReservedslotsDailog"
+        resizable="true"
+        draggable="true"
+        contentWidth="30%"
+        title="Reserve a slot"
+        class="dialogSlideDown"
+    >
+        <beginButton>
+            <Button
+                id="_IDReserveButton"
+                text="Reserve"
+                press="onReserveslotPress"
+                type="Accept"
+            />
+        </beginButton>
+        <endButton>
+            <Button
+                id="idCancelslot"
+                text="Cancel"
+                press="onCloseReserveDialog"
+                type="Negative"
+            />
+        </endButton>
+        <content>
+            <form:SimpleForm
+                id="SimpleFormToolbar"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanXL="4"
+                labelSpanL="3"
+                labelSpanM="4"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="0"
+                emptySpanL="4"
+                emptySpanM="0"
+                emptySpanS="0"
+                columnsXL="2"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false"
+                ariaLabelledBy="Title1"
+                width="100%"
+            >
+                <Label
+                    id="_IDGenVendorLabel"
+                    text="Vendor Name"
+                />
+                <Input
+                    id="_IDGenVendorInput"
+                    value=""
+                />
+                <Label
+                    id="_IDGenLabel2"
+                    text="Vehicle Number"
+                />
+                <Input
+                    id="_IDGenInput2"
+                    value=""
+                />
+                <Label
+                    id="_IDDriverLabel2"
+                    text="Driver Name"
+                />
+                <Input
+                    id="_IDDriverInput2"
+                    value=""
+                />
+                <Label
+                    id="_IDPhnnoLabel2"
+                    text="Phone Number"
+                />
+                <Input
+                    id="_IDPhnnoInput2"
+                    value=""
+                />
+                <Label
+                    id="_IDGenLabel4"
+                    text="Transport type"
+                />
+                <Select
+                    id="idTrasporttype"
+                    selectedKey=""
+                    change="onTruckTypeSelect"
+                >
+                    <items>
+                        <core:Item
+                            id="_IDGenItem1"
+                            text="Inward"
+                            key="Inward"
+                        />
+                        <core:Item
+                            id="_IDGenItem2"
+                            text="Outward"
+                            key="Outward"
+                        />
+                    </items>
+                </Select>
+                <Label
+                    id="iddatetimelabel"
+                    text="Date and Time"
+                    labelFor="DTP5"
+                />
+                <!-- <DateTimePicker
+                    id="idDatetimepicker"
+                    value="{
+        path:'/valueDTP5',
+        type:'sap.ui.model.type.DateTime',
+        formatOptions: {
+            style: 'medium',
+            strictParsing: true
+        }
+    }"
+                    class="sapUiSmallMarginBottom"
+                /> -->
+                <DatePicker
+                    id="idDatetimepicker"
+                    change="onDateChange"
+                    class="sapUiSmallMarginBottom"
+                />
+                    <Label
+                    id="_IDGenLabel1"
+                    text="Parkinglot Number"
+                />
+                <Select
+                    id="parkingLotSelect"
+                    selectedKey=" "
+                    items="{path: '/zparkinglot1Set'}"
+                >
+                    <core:Item
+                        class="dropdown"
+                        id="_IDGenItem4"
+                        key="{ParkinglotNumber}"
+                        text="{ParkinglotNumber}"
+                    />
+                </Select>
+            </form:SimpleForm>
+        </content>
+    </Dialog>
+</core:FragmentDefinition>

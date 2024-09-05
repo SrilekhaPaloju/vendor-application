@@ -1,0 +1,44 @@
+<mvc:View controllerName="com.app.vendorapplication.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:tnt="sap.tnt"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns="sap.m">
+         <Page
+        id="idPage"
+        showHeader="false"
+        class="VendorPage"
+    >
+        <content>
+        <ScrollContainer
+            id="scrollContainer"
+            vertical="true"
+            height="100%"
+             class="vendor"
+        >
+            <tnt:ToolHeader
+                id="toolHeader"
+                class="sapUiTinyMargin"
+                height="8vh"
+                 
+            >
+                <Title
+                    id="productName"
+                    text="Parking Management"
+                    wrapping="true"
+                    textAlign="Right"
+                  
+                />
+                <ToolbarSpacer id="toolbarSpacer" />
+                <Button
+                    id="logiidBopokSlotButton"
+                    text="Reserve Slot"
+                    press="onReservePress"
+                />
+            </tnt:ToolHeader>
+
+        </ScrollContainer>
+        </content>
+
+    </Page>
+</mvc:View>
